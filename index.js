@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3306;
 
 // Configuración de la conexión a la base de datos
 const connection = mysql.createConnection({
@@ -11,6 +11,7 @@ const connection = mysql.createConnection({
   password: 'root',
   database: 'multas'
 });
+
 
 // Conexión a la base de datos
 connection.connect((err) => {
